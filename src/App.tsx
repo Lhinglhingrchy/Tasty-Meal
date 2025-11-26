@@ -4,14 +4,16 @@ import SearchPage from "./pages/SearchPage/SearchPage";
 import DetailsPage from "./pages/DetailsPage/DetailsPage";
 import HomePage from "./pages/HomePage/HomePage";
 import RandomMealPage from "./pages/RandomMealPage/RandomMeal";
+import { searchLoader } from "./pages/SearchPage/searchLoader";
+import { HomeLoader } from "./pages/HomePage/homeLoader";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
     children: [
-      { index: true, element: <HomePage /> },
-      { path: "/search", element: <SearchPage /> },
+      { index: true, element: <HomePage />, loader: HomeLoader },
+      { path: "/search", element: <SearchPage />, loader: searchLoader },
       { path: "/meal/:name", element: <DetailsPage /> },
       { path: "/random-meal", element: <RandomMealPage /> },
     ],
