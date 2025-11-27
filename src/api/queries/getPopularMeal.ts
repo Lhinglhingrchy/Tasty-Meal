@@ -1,5 +1,5 @@
 import axios from "axios";
-import type { Meal } from "../type/meal";
+import type { MealResponse } from "../type/meal";
 
 const popularMeal = [
   "Lasagne",
@@ -14,19 +14,14 @@ const popularMeal = [
 
 export async function getPopularMeal() {
   const promises = popularMeal.map(async (name) => {
-    const res = await axios.get(
+    const res = await axios.get<MealResponse>(
       `https://www.themealdb.com/api/json/v1/1/search.php?s=${name}`
     );
     const meals = res.data.meals;
     if (!meals) return null; // ถ้าไม่เจอเมนู
     const meal = meals[0]; // เลือกตัวแรก
-    return {
-      name: meal.strMeal,
-      picture: meal.strMealThumb,
-      category: meal.strCategory,
-      cuisine: meal.strArea,
-    } as Meal;
+    return meal;
   });
   const data = await Promise.all(promises);
-  return data as Meal[];
+  return data;
 }

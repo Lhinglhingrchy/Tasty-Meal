@@ -10,14 +10,14 @@ function MealListItem({ meal }: MealListItemProp) {
   return (
     <div>
       <div>
-        <img src={meal.picture} />
+        <img src={meal.strMealThumb} />
       </div>
-      <div>{meal.name}</div>
+      <div>{meal.strMeal}</div>
       <p>
-        {meal.category} · {meal.cuisine}
+        {meal.strCategory} · {meal.strArea}
       </p>
       <div>
-        <Link to={`/meal/${meal.name}`} className="border">
+        <Link to={`/meal/${meal.strMeal}`} className="border">
           View Detail
         </Link>
       </div>

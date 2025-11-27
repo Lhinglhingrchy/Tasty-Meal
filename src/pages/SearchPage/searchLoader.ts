@@ -4,6 +4,7 @@ import type { Meal } from "../../api/type/meal";
 // interface ที่เชื่อมระหว่าง searchLoader กับ useLoaderData
 export interface SearchLoaderResult {
   searchResults: Meal[];
+  term: string;
 }
 
 export async function searchLoader({ request }: { request: Request }) {
@@ -13,7 +14,5 @@ export async function searchLoader({ request }: { request: Request }) {
     throw Error("Please enter a meal to search");
   }
   const result = await searchMeals(term);
-  console.log(result);
-
-  return { searchResults: result };
+  return { searchResults: result, term };
 }

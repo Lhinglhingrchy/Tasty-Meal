@@ -6,6 +6,8 @@ import HomePage from "./pages/HomePage/HomePage";
 import RandomMealPage from "./pages/RandomMealPage/RandomMeal";
 import { searchLoader } from "./pages/SearchPage/searchLoader";
 import { HomeLoader } from "./pages/HomePage/homeLoader";
+import "./App.css";
+import { DetailsLoader } from "./pages/DetailsPage/detailsLoader";
 
 const router = createBrowserRouter([
   {
@@ -14,7 +16,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <HomePage />, loader: HomeLoader },
       { path: "/search", element: <SearchPage />, loader: searchLoader },
-      { path: "/meal/:name", element: <DetailsPage /> },
+      { path: "/meal/:name", element: <DetailsPage />, loader: DetailsLoader },
       { path: "/random-meal", element: <RandomMealPage /> },
     ],
   },

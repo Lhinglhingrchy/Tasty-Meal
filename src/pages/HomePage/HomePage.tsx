@@ -3,20 +3,20 @@ import SearchInput from "../../components/SearchInput";
 import type { HomeLoaderResult } from "./homeLoader";
 
 export default function HomePage() {
-  const { popularMeal } = useLoaderData() as HomeLoaderResult;
+  const { popularMeal } = useLoaderData<HomeLoaderResult>();
 
-  const renderPopulatMeal = popularMeal.map((m) => {
+  const renderPopulatMeal = popularMeal.map((meal) => {
     return (
-      <div key={m.name}>
+      <div key={meal.strMeal}>
         <div>
-          <img src={m.picture} />
+          <img src={meal.strMealThumb} />
         </div>
-        <div>{m.name}</div>
+        <div>{meal.strMeal}</div>
         <p>
-          {m.category} · {m.cuisine}
+          {meal.strCategory} · {meal.strArea}
         </p>
         <div>
-          <Link to={`/meal/${m.name}`} className="border">
+          <Link to={`/meal/${meal.strMeal}`} className="border">
             View Detail
           </Link>
         </div>
