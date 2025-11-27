@@ -12,17 +12,20 @@ export default function Header() {
   };
 
   return (
-    <div className="w-full flex justify-between items-center p-3 bg-[#FFE8CD]">
+    <div className="w-full flex justify-between items-center p-3 bg-[#FFE8CD] md:p-4">
       <div
-        className="flex items-center gap-2 cursor-pointer"
+        className="flex items-center gap-2 cursor-pointer md:ml-2"
         onClick={() => {
           navigate("/");
         }}
       >
-        <img src={chefLogo} alt="logo" className="w-[65px]" />
-        <div className="font-bold">TastyMeal</div>
+        <img src={chefLogo} alt="logo" className="w-[65px] md:w-[75px]" />
+        <div className="font-extrabold text-xl md:text-2xl">TastyMeal</div>
       </div>
-      <div className="cursor-pointer" onClick={handleClick}>
+      <div
+        className="cursor-pointer font-extrabold text-lg md:text-2xl md:mr-2"
+        onClick={handleClick}
+      >
         Random Meal
       </div>
     </div>
