@@ -14,7 +14,7 @@ export default function Header() {
   return (
     <div className="w-full flex justify-between items-center p-3 bg-[#FFE8CD] md:p-4">
       <div
-        className="flex items-center gap-2 cursor-pointer md:ml-2"
+        className="flex items-center gap-2 cursor-pointer md:ml-2 lg:ml-5"
         onClick={() => {
           navigate("/");
         }}
@@ -23,7 +23,7 @@ export default function Header() {
         <div className="font-extrabold text-xl md:text-2xl">TastyMeal</div>
       </div>
       <div
-        className="cursor-pointer font-extrabold text-lg md:text-2xl md:mr-2"
+        className="cursor-pointer font-extrabold text-lg md:text-2xl md:mr-2 lg:mr-5"
         onClick={handleClick}
       >
         Random Meal
