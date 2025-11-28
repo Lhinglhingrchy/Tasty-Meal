@@ -3,7 +3,7 @@ import RootLayout from "./pages/RootLayout";
 import SearchPage from "./pages/SearchPage/SearchPage";
 import DetailsPage from "./pages/DetailsPage/DetailsPage";
 import HomePage from "./pages/HomePage/HomePage";
-import RandomMealPage from "./pages/RandomMealPage/RandomMeal";
+import BookmarkPage from "./pages/BookmarkPage/BookmarkPage";
 import { searchLoader } from "./pages/SearchPage/searchLoader";
 import { HomeLoader } from "./pages/HomePage/homeLoader";
 import "./App.css";
@@ -17,7 +17,7 @@ const router = createBrowserRouter([
       { index: true, element: <HomePage />, loader: HomeLoader },
       { path: "/search", element: <SearchPage />, loader: searchLoader },
       { path: "/meal/:name", element: <DetailsPage />, loader: DetailsLoader },
-      { path: "/random-meal", element: <RandomMealPage /> },
+      { path: "/bookmark", element: <BookmarkPage /> },
     ],
   },
 ]);

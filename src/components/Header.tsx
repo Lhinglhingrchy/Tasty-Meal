@@ -5,10 +5,14 @@ import { getRandomMeal } from "../api/queries/getRandomMeal";
 export default function Header() {
   const navigate = useNavigate();
 
-  const handleClick = async () => {
+  const handleClickRandomMeal = async () => {
     const random = await getRandomMeal();
     const meal = random[0];
     navigate(`/meal/${meal.strMeal}`);
+  };
+
+  const handleClickBookmark = () => {
+    navigate("/bookmark");
   };
 
   return (
@@ -24,7 +28,13 @@ export default function Header() {
       </div>
       <div
         className="cursor-pointer font-extrabold text-lg md:text-2xl md:mr-2 lg:mr-5"
-        onClick={handleClick}
+        onClick={handleClickBookmark}
+      >
+        BookMark
+      </div>
+      <div
+        className="cursor-pointer font-extrabold text-lg md:text-2xl md:mr-2 lg:mr-5"
+        onClick={handleClickRandomMeal}
       >
         Random Meal
       </div>

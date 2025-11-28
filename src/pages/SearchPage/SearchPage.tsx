@@ -7,7 +7,7 @@ export default function SearchPage() {
   const { searchResults, term } = useLoaderData<SearchLoaderResult>();
 
   const renderMeal = searchResults.map((result) => {
-    return <MealListItem meal={result} key={result.strMeal} />;
+    return <MealListItem meal={result} key={result.idMeal} />;
   });
   return (
     <div className="flex flex-col">
@@ -16,7 +16,7 @@ export default function SearchPage() {
         <h1 className="text-center font-bold text-lg md:text-2xl lg:text-3xl">
           Result for: <span className="italic">{term}</span>
         </h1>
-        <div className="flex flex-col items-center gap-3 flex-wrap md:flex-row md:justify-center md:gap-6 md:py-5">
+        <div className="flex flex-col items-center gap-3 flex-wrap md:flex-row md:justify-center md:gap-6 md:py-5 lg:gap-3 xl:gap-6">
           {renderMeal}
         </div>
       </div>
