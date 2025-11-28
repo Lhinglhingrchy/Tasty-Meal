@@ -22,7 +22,7 @@ function SearchInput() {
         <form onSubmit={handleSubmit} className="flex gap-2">
           <input
             type="text"
-            className="border-3 border-[#FFD6BA] bg-[#FFF2EB] rounded p-1 hover:border-[#FFD6BA] focus:border-[#FFD6BA] focus:outline-none md:text-lg md:px-2"
+            className="border-[3px] border-[#FFD6BA] bg-[#FFF2EB] rounded p-1 hover:border-[#FFD6BA] focus:border-[#FFD6BA] focus:outline-none md:text-lg md:px-2"
             placeholder="Search for a Meal..."
             value={term}
             onChange={(e) => {
@@ -30,7 +30,7 @@ function SearchInput() {
             }}
           />
           <button
-            className="border-3 border-[#FFD6BA] bg-[#FFF2EB] rounded p-2 font-bold cursor-pointer md:text-lg"
+            className="border-[3px] border-[#FFD6BA] bg-[#FFF2EB] rounded p-2 font-bold cursor-pointer md:text-lg"
             type="submit"
           >
             Search

@@ -49,25 +49,31 @@ function MealListItem({ meal, onToggleBookmark }: MealListItemProp) {
       <div className="flex justify-center">
         <img
           src={meal.strMealThumb}
-          className="rounded-xl w-[90%] border-3 border-[#B17F59]"
+          className="rounded-xl w-[90%] border-[3px] border-[#B17F59]"
         />
       </div>
-      <div className="font-bold text-lg text-center md:text-xl">
+      <div className="font-bold text-lg text-center line-clamp-1 md:text-xl">
         {meal.strMeal}
       </div>
       <p className="font-medium md:text-xl">
         {meal.strCategory} · {meal.strArea}
       </p>
-      <div className="mt-2">
-        <button onClick={toggleBookmark}>
-          {isBookmark ? <FaBookmark /> : <FaRegBookmark />}
-        </button>
+      <div className="mt-2 flex items-center justify-evenly w-full">
         <Link
           to={`/meal/${meal.strMeal}`}
-          className="border-3 border-[#FFD6BA] bg-[#FFF2EB] p-1 rounded-lg font-medium md:text-xl"
+          className="block border-[3px] border-[#FFD6BA] bg-[#FFF2EB] p-1 px-3 rounded-lg font-medium md:text-xl"
         >
           View Detail
         </Link>
+        <div className="flex justify-center border-[3px] border-[#FFD6BA] bg-[#FFF2EB] rounded-lg p-1">
+          <button onClick={toggleBookmark} className="cursor-pointer">
+            {isBookmark ? (
+              <FaBookmark className="text-2xl" />
+            ) : (
+              <FaRegBookmark className="text-2xl" />
+            )}
+          </button>
+        </div>
       </div>
     </div>
   );

@@ -21,7 +21,7 @@ export default function BookmarkPage() {
       </h1>
       <div className="flex flex-col items-center gap-3 flex-wrap md:flex-row md:justify-center md:gap-6 md:py-5 lg:gap-3 xl:gap-6">
         {bookmarkList.length === 0 ? (
-          <div>No Bookmark</div>
+          <div className="font-medium mt-4 md:text-xl">No Bookmark</div>
         ) : (
           bookmarkList.map((meal) => (
             <MealListItem

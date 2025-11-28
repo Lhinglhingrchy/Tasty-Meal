@@ -14,7 +14,7 @@ export default function HomePage() {
         <div className="flex justify-center">
           <img
             src={meal.strMealThumb}
-            className="rounded-xl w-[90%] border-3 border-[#B17F59]"
+            className="rounded-xl w-[90%] border-[3px] border-[#B17F59]"
           />
         </div>
         <div className="font-bold text-lg text-center md:text-xl">
@@ -26,7 +26,7 @@ export default function HomePage() {
         <div className="mt-2">
           <Link
             to={`/meal/${meal.strMeal}`}
-            className="border-3 border-[#FFD6BA] bg-[#FFF2EB] p-1 rounded-lg font-medium md:text-xl"
+            className="border-[3px] border-[#FFD6BA] bg-[#FFF2EB] p-1 px-3 rounded-lg font-medium md:text-xl"
           >
             View Detail
           </Link>
