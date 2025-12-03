@@ -35,7 +35,7 @@ export default function Header() {
           className="cursor-pointer font-extrabold text-lg md:text-2xl"
           onClick={handleClickBookmark}
         >
-          BookMark
+          Bookmark
         </div>
         <div
           className="cursor-pointer font-extrabold text-lg md:text-2xl"
