@@ -14,7 +14,7 @@ Users can **search for recipes** and **bookmark** their favorite recipes for lat
 
 ## 🛠️ Tech Stack
 
-- **React**
+- **React + Vite**
 - **TypeScript**
 - **Tailwind CSS**
 - **API Integration** for fetching recipe data
